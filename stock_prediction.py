@@ -10,12 +10,9 @@ from keras.optimizers import Adam
 
 def create_dataset(path):
     global features_col
-    global technical_value
     features_col = []
-    technical_value = []
     data = pd.read_csv(path)
     data = data.drop('Date', axis=1)
-    data = data.drop(data.columns[-1], axis=1)
     cols = data.columns
 
     unscaled_y = data['Open']
@@ -91,8 +88,8 @@ def evaluate_model_and_plot_result():
 
 
 if __name__ == '__main__':
-    path = 'data/etf_1321.csv'
-    history_points = 25
+    path = 'data/etf_4751.csv'
+    history_points = 30
     data, y_normaliser = create_dataset(path)
 
     TRAIN_SIZE = 0.9
