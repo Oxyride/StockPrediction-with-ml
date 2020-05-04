@@ -77,6 +77,7 @@ def vbgmm_cluster(pri_data, n_components):
     return data.T
 
 
+# 同じクラスの株価をプロット
 def plot_result(pri_data, cluster_data):
     plt.figure(figsize=(25, 10))
     for col in cluster_data.columns:
