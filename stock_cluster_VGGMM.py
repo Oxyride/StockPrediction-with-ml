@@ -30,7 +30,7 @@ def make_data():
     return data
 
 
-# データを相関係数の降順で並べ換える
+# データ間の相関係数の降順で並べ換える
 def make_ranking(target_data):
     data = target_data.copy()
     ranking = data.corrwith(data[target])
